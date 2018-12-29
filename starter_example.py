@@ -52,5 +52,6 @@ for a in range(1, 1001):
 for cube_sum in pair_sum:
     list = pair_sum[cube_sum]
     for i in range(len(list)):
-        for j in range(i, len(list)):
-            print(list[i][0], list[i][1], list[j][0], list[j][1])
+        for j in range(i+1, len(list)):
+            if list[i][0] != list[j][0] and list[i][0] != list[j][1]:
+                print(list[i][0], list[i][1], list[j][0], list[j][1])
