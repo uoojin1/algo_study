@@ -54,4 +54,4 @@ def stringCompressor(string):
         current_char_count = 0
     return string if len(string) < len(compressed_string) else compressed_string
 
-print(stringCompressor("aaccccccca"))
+print(stringCompressor("111  1111 "))
