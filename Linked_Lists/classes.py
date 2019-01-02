@@ -18,11 +18,15 @@ node1 = Node(3)
 node2 = Node(4)
 node3 = Node(5)
 node4 = Node(6)
+node5 = Node(7)
+node6 = Node(8)
 
 list = LinkedList()
 list.head = node1
 node1.next = node2
 node2.next = node3
 node3.next = node4
+node4.next = node5
+node5.next = node6
 
 # print(list.listprint())
