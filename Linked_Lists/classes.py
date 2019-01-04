@@ -29,4 +29,30 @@ node3.next = node4
 node4.next = node5
 node5.next = node6
 
+node11 = Node(3)
+node12 = Node(4)
+node13 = Node(5)
+node14 = Node(6)
+node15 = Node(7)
+
+list1 = LinkedList()
+list1.head = node11
+node11.next = node12
+node12.next = node13
+node13.next = node14
+node14.next = node15
+
+palindrome_list = LinkedList()
+node111 = Node(2)
+node112 = Node(3)
+node113 = Node(7)
+node114 = Node(3)
+node115 = Node(2)
+palindrome_list.head = node111
+node111.next = node112
+node112.next = node113
+node113.next = node114
+node114.next = node115
+
+
 # print(list.listprint())
