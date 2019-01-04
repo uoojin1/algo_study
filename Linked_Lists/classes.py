@@ -14,8 +14,8 @@ class LinkedList:
             print(node.val)
             node = node.next
 
-node1 = Node(3)
-node2 = Node(4)
+node1 = Node(52)
+node2 = Node(44)
 node3 = Node(5)
 node4 = Node(6)
 node5 = Node(7)
@@ -39,6 +39,13 @@ list1 = LinkedList()
 list1.head = node11
 node11.next = node12
 node12.next = node13
+node13.next = node14
+node14.next = node15
+
+list2 = LinkedList()
+list2.head = node1
+node1.next = node2
+node2.next = node13
 node13.next = node14
 node14.next = node15
 
