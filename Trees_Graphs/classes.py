@@ -55,7 +55,7 @@ class Graph:
 
                 
 
-
+# 1 2 3 4 5 6 7 8 9
 
 node0 = TreeNode(0)
 node1 = TreeNode(1)
@@ -65,16 +65,31 @@ node4 = TreeNode(4)
 node5 = TreeNode(5)
 node6 = TreeNode(6)
 node7 = TreeNode(7) 
+'''
+     0
+   1   2
+  3 4 5 6
+   7
+'''
+# 1 2 3 4 5 6 7
+node4.leftNode = node2
+node4.rightNode = node6
+node2.leftNode = node1
+node2.rightNode = node3
+node6.leftNode = node5
+node6.rightNode = node7
 
-node0.leftNode = node1
-node0.rightNode = node2
-node1.leftNode = node3
-node1.rightNode = node4
-node2.leftNode = node5
-node2.rightNode = node6
-node3.rightNode = node7
+# node0.leftNode = node1
+# node0.rightNode = node2
+# node1.leftNode = node3
+# node1.rightNode = node4
+# node2.leftNode = node5
+# node2.rightNode = node6
+# node3.rightNode = node7
 
-# myTree = Tree(node0)
+myTree = Tree(node0)
+myTree2 = Tree(node4)
+myTree2.levelPrintTree()
 # myTree.levelPrintTree() # print tree
 
 gNode1 = GraphNode(1)
