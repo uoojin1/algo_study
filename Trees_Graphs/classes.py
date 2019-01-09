@@ -10,7 +10,7 @@ class TreeNode(Node):
     def __init__(self, value=None):
         Node.__init__(self, value)
         self.leftNode = None;
-        self.rightNode = None;
+        self.rightNode = None;        
 
 class GraphNode(Node):
     def __init__(self, value=None):
@@ -21,7 +21,7 @@ class GraphNode(Node):
         print ''.join(node.value for node in self.adjacentNodes)
 
 class Tree:
-    def __init__(self, root):
+    def __init__(self, root=None):
         self.rootNode = root
     def levelPrintTree(self):
         currentLevel = [self.rootNode]
@@ -93,8 +93,8 @@ gNode3.adjacentNodes = [gNode2, gNode6]
 gNode4.adjacentNodes = [gNode1, gNode5, gNode7]
 gNode5.adjacentNodes = [gNode2, gNode4, gNode6, gNode8]
 gNode6.adjacentNodes = [gNode3, gNode5, gNode9]
-gNode7.adjacentNodes = [gNode4]
-gNode8.adjacentNodes = [gNode5, gNode9]
+gNode7.adjacentNodes = [gNode4, gNode8]
+gNode8.adjacentNodes = [gNode5, gNode7, gNode9]
 gNode9.adjacentNodes = [gNode6, gNode8]
 
 # myGraph = Graph(gNode1)

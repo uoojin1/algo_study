@@ -14,3 +14,11 @@ print filterList1
 
 filterAndMapList1 = [item*3 for item in list1 if item%2 == 1]
 print filterAndMapList1
+
+'''
+empty_array = []
+
+if not empty_array   --> if array is not empty
+if empty_array != [] --> if array is not empty
+thus, same thing
+'''
