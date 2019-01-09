@@ -11,7 +11,17 @@ larger value will be the value of the leftmost child of the right subtree
 
 from classes import *
 
+def findElement(node, targetValue):
+    if not node:
+        return
+    if node.value == targetValue:
+        return node
+    if node.value <= targetValue:
+        findElement(node.leftNode)
+    else:
+        findElement(node.rightNode)
+
 
 def findNext(tree, value):
-    
+
 
