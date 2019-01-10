@@ -89,7 +89,7 @@ node6.rightNode = node7
 
 myTree = Tree(node0)
 myTree2 = Tree(node4)
-myTree2.levelPrintTree()
+# myTree2.levelPrintTree()
 # myTree.levelPrintTree() # print tree
 
 gNode1 = GraphNode(1)
