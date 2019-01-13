@@ -9,6 +9,7 @@ from classes import *
 
 node = list.head
 prev_node = None
+
 def deleteMiddleNode(node):
     while node is not None and node.next is not None:
         node.val = node.next.val
@@ -19,5 +20,4 @@ def deleteMiddleNode(node):
 list.listprint()
 deleteMiddleNode(node.next.next)
 list.listprint()
-    
     

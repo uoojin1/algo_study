@@ -82,3 +82,40 @@ myBinarySearchTree.insertNode(node5)
 myBinarySearchTree.insertNode(node7)
 
 myBinarySearchTree.levelOrderPrint()
+
+'''
+The best approach is storing the left/right children count in each node
+thus, at the root you know how many nodes are in the tree as a total,
+do a math rand to find a number between 0~total-1
+traverse down the tree, with the index
+      4
+  2       6
+1   3   5   7
+0~2 3 4~6, thus if value = 2, then we'd go to the left child when we are @ 4
+
+so now @ 2, left count = 1, right count = 1, thus 0 1 2
+thus go right
+
+'''
+import random
+
+def children(node):
+    if not node:
+        return 0
+    else:
+        return node.children + 1
+
+def getRandomNodeHelper(node, index):
+    if index == children(node.left):
+        return node.val
+    elif index < children(node.left):
+        return getRandomNodeHelper(node.left, index)
+    else:
+        return getRandomNodeHelper(node.right, index-children(node.left)-1)
+    return None
+
+def getRandomeNode(root):
+    if not root:
+        return None
+    target_index = random.randint(0, children(root)+1)
+    return getRandomNodeHelper(root, target_index)

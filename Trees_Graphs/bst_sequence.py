@@ -20,23 +20,12 @@ lets think this recursively.
 at 1, [[1]] // path == [3]
 at 3, [[3]]
 at 2, [[2,1,3],[2,3,1]]
+at 6, [[6,5,7],[6,7,5]]
+at 4, [[4,2,1,3],[4,2,3,1],]
 '''
 
 def helper(node):
     ret = []
-
-
-# def helper(node):
-#     if not node:
-#         return [[]]
-#     if not node.leftNode and not node.rightNode:
-#         return [[node.value]]
-#     ret = []
-#     for path in helper(node.leftNode):
-#         ret.append([node.value]+path)
-#     for path in helper(node.rightNode):
-#         ret.append([node.value]+path)
-#     return ret
 
 def findBstPermutation(tree):
     if not tree and not tree.rootNode:
