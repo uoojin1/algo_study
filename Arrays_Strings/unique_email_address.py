@@ -9,15 +9,70 @@ Given a list of emails, we send one email to each address in the list.  How many
 
 '''
 
-def numUniqueEmails(emails):
-    seen = set()
-    for email in emails:
-        local, domain = email.split('@')
-        cleanLocal = local.split('+')[0].replace('.','')
-        totalEmail = cleanLocal + '@' + domain
-        seen.add(totalEmail)
-    return len(seen)
+# def numUniqueEmails(emails):
+#     seen = set()
+#     for email in emails:
+#         local, domain = email.split('@')
+#         cleanLocal = local.split('+')[0].replace('.','')
+#         totalEmail = cleanLocal + '@' + domain
+#         seen.add(totalEmail)
+#     return len(seen)
 
-testinput = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+# testinput = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
 
-print numUniqueEmails(testinput)
+# print numUniqueEmails(testinput)
+
+# []
+# ['a@b.com']
+# ['a@b.com', 'a@b.co.m']
+# ['a@b.com', 'a.@b.co.m', '@b.com', '.a@b.com']
+
+def solution(L):
+    # write your code in Python 3.6
+    if not L:
+        return 0
+    seenEmails = {}
+    emailWithMaxCount = ''
+    maxCount = 0
+    for email in L:
+        localPart, domainPart = email.split('@')
+        localClean = localPart.split('+')[0]
+        localCleanWithoutDot = localClean.replace('.','')
+        processedEmail = localCleanWithoutDot + '@' + domainPart
+        print 'processedEmail', processedEmail
+        if processedEmail in seenEmails:
+            seenEmails[processedEmail] += 1
+            if seenEmails[processedEmail] > maxCount:
+                maxCount = seenEmails[processedEmail]
+        else:
+            seenEmails[processedEmail] = 1
+            if seenEmails[processedEmail] > maxCount:
+                maxCount = seenEmails[processedEmail]
+    return maxCount
+
+print solution(['aaa@b.com', 'a.a.a@b.co.m', 'aa+a@b.com', 'a.aa+.a@b.com'])
+
+
+['aaa@b.com', 'a.a.a@b.co.m', 'aa+a@b.com', 'a.aa+.a@b.com']
+
+# def solution(L):
+#     # write your code in Python 3.6
+#     if not L:
+#         return 0
+#     seenEmails = {}
+#     emailWithMaxCount = ''
+#     maxCount = 0
+#     for email in L:
+#         localPart, domainPart = email.split('@')
+#         localClean = localPart.split('+')[0].replace('.', '')
+#         processedEmail = localClean + '@' + domainPart
+#         if processedEmail in seenEmails:
+#             seenEmails[processedEmail] += 1
+#             if seenEmails[processedEmail] > maxCount:
+#                 maxCount = seenEmails[processedEmail]
+#         else:
+#             seenEmails[processedEmail] = 1
+#             if seenEmails[processedEmail] > maxCount:
+#                 maxCount = seenEmails[processedEmail]
+#     return maxCount
+    
