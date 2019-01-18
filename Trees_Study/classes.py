@@ -64,6 +64,6 @@ n9.right = n10
 
 myTree = Tree(n5)
 
-myTree.preOrderTraversal()
-myTree.inOrderTraversal()
-myTree.postOrderTraversal()
+# myTree.preOrderTraversal()
+# myTree.inOrderTraversal()
+# myTree.postOrderTraversal()
