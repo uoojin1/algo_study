@@ -17,7 +17,7 @@ def flipAndInvertImage(A):
             right -= 1
         # inverting
         for index, value in enumerate(A[i]):
-            A[i][index] = A[i][index] ^ 1
+            A[i][index] = 0 if A[i][index] else 1
     return A
 
 Image = [
