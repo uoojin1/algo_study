@@ -10,7 +10,7 @@ def twoSum(nums, target):
     history = {}
     for i, num in enumerate(nums):
         if target - num in history:
-            return (history[target-num], i)
+            return [history[target-num], i]
         else:
             history[num] = i
     return None
