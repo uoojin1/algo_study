@@ -19,3 +19,5 @@ def findCelebrity(n):
         if i != candidate and (knows(candidate,i) or not knows(i, candidate)) :
             return -1
     return candidate
+
+# math expression recursion?
