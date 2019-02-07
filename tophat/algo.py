@@ -27,7 +27,7 @@ def printCourseMaterial(materials):
         for child in children:
             printThings(count +1, child)
     for item in printOrder:
-        printThings(0, item)
+        printThings(0, item) 
     
 
 def numberOfFieldsPresent(fields):
